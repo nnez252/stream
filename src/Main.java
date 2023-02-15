@@ -41,6 +41,6 @@ findEvenNumbers();
         Predicate<Integer> fn;
         fn = (n) -> (n % 2) == 0;
         Stream<Integer> resStream = st.filter(fn);
-        System.out.println("n = "+resStream.count());
+        System.out.println("n =  "+resStream.count());
     }
 }
