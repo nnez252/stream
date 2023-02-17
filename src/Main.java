@@ -32,15 +32,12 @@ findEvenNumbers();
     }
 
     public static void findEvenNumbers() {
-        List<Integer> AL = new ArrayList<>();
+        List<Integer> al = new ArrayList<>();
         int number;
         number = ((int) (Math.random() * 100));
-        AL.add(number);
-        System.out.println(AL);
-        Stream<Integer> st = AL.stream();
-        Predicate<Integer> fn;
-        fn = (n) -> (n % 2) == 0;
-        Stream<Integer> resStream = st.filter(fn);
-        System.out.println("n = "+resStream.count());
+        al.add(number);
+        System.out.println(al);
+        int n2 = (int)(al.stream().filter((n)->(n%2)==0)).count();
+        System.out.println("n2 = " + n2);
     }
 }
