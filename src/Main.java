@@ -7,14 +7,14 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Main {
+ public class Main {
 
 
     public static void main(String[] args) {
         Stream<Integer> stream = new ArrayList<>(Arrays.asList(1, 2, 3, 5, 8, 10, 12)).stream();
         findMinMax(stream,
                 (x, y) -> x.compareTo(y),
-                (x, y) -> System.out.println(String.format("min: %s, max: %s", x, y)));
+                (x, y) -> System.out.println(String.format(" min: %s, max: %s", x, y)));
         stream.close();
 findEvenNumbers();
     }
@@ -31,16 +31,13 @@ findEvenNumbers();
             }
     }
 
-    public static void findEvenNumbers() {
-        List<Integer> AL = new ArrayList<>();
-        int number;
-        number = ((int) (Math.random() * 100));
-        AL.add(number);
-        System.out.println(AL);
-        Stream<Integer> st = AL.stream();
-        Predicate<Integer> fn;
-        fn = (n) -> (n % 2) == 0;
-        Stream<Integer> resStream = st.filter(fn);
-        System.out.println("n =  "+resStream.count());
+     public static void findEvenNumbers() {
+         List<Integer> al = new ArrayList<>();
+         int number;
+         number = ((int) (Math.random() * 100));
+         al.add(number);
+         System.out.println(al);
+         int n2 = (int)(al.stream().filter((n)->(n%2)==0)).count();
+         System.out.println("n2 = " + n2);
     }
 }
