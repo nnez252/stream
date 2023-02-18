@@ -31,13 +31,13 @@ findEvenNumbers();
             }
     }
 
-    public static void findEvenNumbers() {
-        List<Integer> al = new ArrayList<>();
-        int number;
-        number = ((int) (Math.random() * 100));
-        al.add(number);
-        System.out.println(al);
-        int n2 = (int)(al.stream().filter((n)->(n%2)==0)).count();
-        System.out.println("n2 = " + n2);
+     public static void findEvenNumbers() {
+         List<Integer> al = new ArrayList<>();
+         int number;
+         number = ((int) (Math.random() * 100));
+         al.add(number);
+         System.out.println(al);
+         int n2 = (int)(al.stream().filter((n)->(n%2)==0)).count();
+         System.out.println("n2 = " + n2);
     }
 }
